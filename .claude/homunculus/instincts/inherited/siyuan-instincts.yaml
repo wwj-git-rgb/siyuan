@@ -1,0 +1,543 @@
+# Instincts generated from https://github.com/wwj-git-rgb/siyuan
+# Generated: 2026-07-04T05:25:04.622Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: siyuan-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Commit Length
+
+## Action
+
+Write moderate-length commit messages (~80 characters)
+
+## Evidence
+
+- Average commit message length: 80 chars
+- Based on 100 commits
+
+---
+id: siyuan-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: siyuan-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: siyuan-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: siyuan-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: siyuan-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: app/src/protyle/render/av/*, app/src/boot/*, app/src/config/*
+
+---
+id: siyuan-workflow-feature-development-ai-semantic-search
+trigger: "when doing feature development ai semantic search"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Workflow Feature Development Ai Semantic Search
+
+## Action
+
+Follow the feature-development-ai-semantic-search workflow:
+1. Implement backend logic (Go) for embeddings and AI search.
+2. Update or create API endpoints for AI features.
+3. Add or update UI config files for AI tabs.
+4. Update localization files for new UI elements.
+5. Modify or add SCSS for related UI components.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: kernel/model/embedding.go, kernel/api/ai.go, kernel/api/router.go
+
+---
+id: siyuan-workflow-documentation-update-multilingual
+trigger: "when doing documentation update multilingual"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Workflow Documentation Update Multilingual
+
+## Action
+
+Follow the documentation-update-multilingual workflow:
+1. Edit or add documentation files for each supported language.
+2. Update main README and related docs.
+3. Commit all language variants together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: README.md, README.zh-CN.md, README.ja.md
+
+---
+id: siyuan-workflow-bugfix-database-table-ui
+trigger: "when doing bugfix database table ui"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Workflow Bugfix Database Table Ui
+
+## Action
+
+Follow the bugfix-database-table-ui workflow:
+1. Identify and fix the bug in the relevant UI TypeScript files.
+2. Update or add related files for table actions, filters, or rendering.
+3. Commit all related UI files together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: app/src/protyle/render/av/cell.ts, app/src/protyle/render/av/filter.ts, app/src/protyle/render/av/action.ts
+
+---
+id: siyuan-workflow-feature-add-cli-command
+trigger: "when doing feature add cli command"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Workflow Feature Add Cli Command
+
+## Action
+
+Follow the feature-add-cli-command workflow:
+1. Implement the new CLI command in Go.
+2. Update or add related guide files for the new command.
+3. Commit both code and guide updates together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: kernel/cli/cmd/*.go, app/guide/**/*.sy
+
+---
+id: siyuan-workflow-test-driven-backend-feature
+trigger: "when doing test driven backend feature"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/siyuan
+---
+
+# Siyuan Workflow Test Driven Backend Feature
+
+## Action
+
+Follow the test-driven-backend-feature workflow:
+1. Implement or fix backend logic in Go.
+2. Add or update corresponding *_test.go files.
+3. Commit both implementation and tests together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: kernel/agent/*.go, kernel/agent/*_test.go, kernel/av/*.go
+
+---
+id: siyuan-instinct-file-naming-camelCase
+trigger: "When creating or renaming a file in the codebase."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct File Naming CamelCase
+
+## Action
+
+Use camelCase for file names.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: siyuan-instinct-function-naming-camelCase
+trigger: "When defining a function."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Function Naming CamelCase
+
+## Action
+
+Name the function using camelCase.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: siyuan-instinct-class-naming-PascalCase
+trigger: "When defining a class."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Class Naming PascalCase
+
+## Action
+
+Name the class using PascalCase.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: siyuan-instinct-constant-naming-SCREAMING_SNAKE_CASE
+trigger: "When defining a constant."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Constant Naming SCREAMING_SNAKE_CASE
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE.
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: siyuan-instinct-import-style-relative
+trigger: "When importing modules in code."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Import Style Relative
+
+## Action
+
+Use relative import paths.
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: siyuan-instinct-export-style-named
+trigger: "When exporting modules or functions."
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Export Style Named
+
+## Action
+
+Use named exports.
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: siyuan-instinct-go-tests-naming
+trigger: "When writing Go tests."
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Go Tests Naming
+
+## Action
+
+Name test files with the *_test.go suffix and place them alongside the implementation.
+
+## Evidence
+
+- Pattern in test-driven-backend-feature workflow
+- Files like kernel/agent/*_test.go
+
+---
+id: siyuan-instinct-go-tests-together
+trigger: "When implementing or fixing backend logic in Go."
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Go Tests Together
+
+## Action
+
+Commit both the implementation and corresponding *_test.go files together.
+
+## Evidence
+
+- Pattern in test-driven-backend-feature workflow
+
+---
+id: siyuan-instinct-commit-prefix-emoji
+trigger: "When writing a commit message."
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Commit Prefix Emoji
+
+## Action
+
+Prefix the commit message with an emoji indicating the type of change (e.g., :art:, :construction_worker:, :memo:).
+
+## Evidence
+
+- Seen in commits: ':art: menu icon', ':construction_worker: Fix AUR fail. (#17992)', ':memo: https://github.com/siyuan-note/siyuan/issues/17996'
+
+---
+id: siyuan-instinct-commit-reference-issue-url
+trigger: "When referencing an issue in a commit."
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Commit Reference Issue Url
+
+## Action
+
+Include the GitHub issue URL or number in the commit message.
+
+## Evidence
+
+- Seen in commits: ':art: https://github.com/siyuan-note/siyuan/issues/17941', ':memo: https://github.com/siyuan-note/siyuan/issues/17996'
+
+---
+id: siyuan-instinct-feature-development-ai-semantic-search
+trigger: "When someone wants to add or extend AI/semantic search functionality."
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Feature Development Ai Semantic Search
+
+## Action
+
+Implement backend logic (Go) for embeddings and AI search, update/create API endpoints, update UI config, localization, and SCSS for AI features.
+
+## Evidence
+
+- feature-development-ai-semantic-search workflow
+- Files: kernel/model/embedding.go, kernel/api/ai.go, app/src/config/tabs/aiTab.ts, app/appearance/langs/*.json
+
+---
+id: siyuan-instinct-documentation-update-multilingual
+trigger: "When someone wants to update or add documentation in multiple languages."
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Documentation Update Multilingual
+
+## Action
+
+Edit or add documentation files for each supported language and commit all language variants together.
+
+## Evidence
+
+- documentation-update-multilingual workflow
+- Files: README.md, README.zh-CN.md, README.ja.md, README.tr.md, docs/API.md, docs/API.zh-CN.md
+
+---
+id: siyuan-instinct-bugfix-database-table-ui
+trigger: "When someone wants to fix a bug in the database table UI (filtering, scrolling, field issues)."
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Bugfix Database Table Ui
+
+## Action
+
+Identify and fix the bug in relevant UI TypeScript files and commit all related UI files together.
+
+## Evidence
+
+- bugfix-database-table-ui workflow
+- Files: app/src/protyle/render/av/cell.ts, app/src/protyle/render/av/filter.ts
+
+---
+id: siyuan-instinct-feature-add-cli-command
+trigger: "When someone wants to add a new CLI command."
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Feature Add Cli Command
+
+## Action
+
+Implement the new CLI command in Go and update related guide files, committing both together.
+
+## Evidence
+
+- feature-add-cli-command workflow
+- Files: kernel/cli/cmd/*.go, app/guide/**/*.sy
+
+---
+id: siyuan-instinct-test-driven-backend-feature
+trigger: "When someone wants to add or fix a backend feature with tests."
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/siyuan
+---
+
+# Siyuan Instinct Test Driven Backend Feature
+
+## Action
+
+Implement or fix backend logic in Go, add/update *_test.go files, and commit both together.
+
+## Evidence
+
+- test-driven-backend-feature workflow
+- Files: kernel/agent/*.go, kernel/agent/*_test.go
+
